@@ -3,7 +3,7 @@ name: Auto Compress Cydia Indexes
 on:
   push:
     paths:
-      - 'Packages' # Le robot se réveille uniquement si vous modifiez le fichier Packages
+      - 'Packages'
 
 jobs:
   build:
@@ -14,14 +14,13 @@ jobs:
 
     - name: Generate Gzip and Bzip2
       run: |
-        # Crée les versions compressées à partir du fichier Packages texte
         gzip -c Packages > Packages.gz
         bzip2 -c Packages > Packages.bz2
 
     - name: Commit and Push Compressed Files
       run: |
         git config --global user.name "github-actions[bot]"
-        git config --global user.email "github-actions[bot]@://github.com"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
         git add Packages.gz Packages.bz2
         git diff-index --quiet HEAD || git commit -m "🤖 Auto-compression: Packages.gz & Packages.bz2 updated"
         git push
