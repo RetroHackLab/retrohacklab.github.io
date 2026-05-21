@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Retro HackLab Repo</title>
+
+<style>
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    background: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+/* HEADER */
+.header {
+    background: #ffffff;
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+
+.header img {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    margin-right: 10px;
+}
+
+.header-title {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.header-title h1 {
+    font-size: 16px;
+    margin: 0;
+    color: #222;
+}
+
+.header-title img {
+    width: 18px;
+    height: 18px;
+}
+
+/* BUTTON ADD TO CYDIA */
+.btn-add-cydia {
+    margin-left: auto; /* Pousse le bouton complètement à droite */
+    background: #007aff;
+    color: #ffffff !important;
+    text-decoration: none;
+    padding: 6px 14px;
+    border-radius: 16px;
+    font-size: 13px;
+    font-weight: bold;
+    white-space: nowrap;
+    transition: background 0.2s, transform 0.1s;
+}
+
+.btn-add-cydia:hover {
+    background: #0056b3;
+}
+
+.btn-add-cydia:active {
+    transform: scale(0.95);
+}
+
+/* MAIN */
+.section {
+    margin-top: 10px;
+    padding-bottom: 20px;
+}
+
+.section-title {
+    padding: 10px;
+    font-weight: bold;
+    color: #666;
+    font-size: 14px;
+}
+
+/* PACKAGE */
+.package {
+    background: #fff;
+    padding: 12px;
+    border-top: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    transition: 0.2s;
+}
+
+.package:hover {
+    background: #f8f8f8;
+}
+
+.package img {
+    width: 28px;
+    height: 28px;
+    margin-right: 10px;
+    border-radius: 6px;
+}
+
+.package-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.package a {
+    text-decoration: none;
+    color: #007aff;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.package span {
+    display: block;
+    color: #999;
+    font-size: 12px;
+    margin-top: 2px;
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    color: #999;
+    font-size: 12px;
+    padding: 20px;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+
+    .header-title h1 {
+        font-size: 13px;
+    }
+
+    .btn-add-cydia {
+        padding: 5px 10px;
+        font-size: 11px;
+    }
+
+    .package {
+        padding: 10px;
+    }
+
+    .package a {
+        font-size: 14px;
+    }
+
+}
+
+/* DESKTOP */
+@media (min-width: 900px) {
+
+    .section {
+        max-width: 650px;
+        margin: auto;
+    }
+
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<div class="header">
+
+    <img src="https://i.ibb.co/nMYCjH75/image-e39a05f5.png">
+
+    <div class="header-title">
+        <h1>Welcome to Retro HackLab's Repo</h1>
+        <img src="https://cdn-icons-png.flaticon.com/512/888/888879.png">
+    </div>
+
+    <!-- BOUTON AJOUTÉ ICI -->
+    <a href="cydia://url/https://saurik.com" class="btn-add-cydia">
+        Add to Cydia
+    </a>
+
+</div>
+
+<!-- SECTION -->
+
+<div class="section">
+
+<div class="section-title">All Packages</div>
+
+<!-- HackPrefs -->
+
+<div class="package">
+    <img src="https://i.ibb.co/WN64h9Hd/icon.png">
+
+    <div class="package-content">
+        <a href="https://sites.google.com/view/retrohacklab/repo/hackprefs">
+            HackPrefs
+        </a>
+
+        <span>Activation Prefs & Hacktivation Prefs & Clear Push Utils & </span>
+    </div>
+</div>
+
+<!-- HackPrefs iPad -->
+
+<div class="package">
+    <img src="https://i.ibb.co/ycQDpbWN/icon.png">
+
+    <div class="package-content">
+        <a href="https://sites.google.com/view/retrohacklab/repo/hackprefs">
+            HackPrefs (iPad)
+        </a>
+
+        <span>Activation Prefs & Hacktivation Prefs & Clear Push utils (iPad)</span>
+    </div>
+</div>
+
+<!-- AppSync -->
+
+<div class="package">
+    <img src="https://cydia.invoxiplaygames.uk/img/tweakicon.png">
+
+    <div class="package-content">
+        <a href="https://sites.google.com/view/retrohacklab/repo/appsync-for-os-5/">
+            AppSync Unified
+        </a>
+
+        <span>Accept Installation Cracked Apps</span>
+    </div>
+</div>
+
+<!-- Veteris -->
+
+<div class="package">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrQAmr1p8GI0qiY3vTDFl0-Cexyk7Pv6RL9ttrnaipGA&s=10">
+
+    <div class="package-content">
+        <a href="https://sites.google.com/view/retrohacklab/repo/yzu-veteris/">
+            Veteris
+        </a>
+
+        <span>Alternative App Store for old iOS</span>
+    </div>
+</div>
+
+<!-- AppSync OS3 -->
+
+<div class="package">
+    <img src="https://cydia.invoxiplaygames.uk/img/tweakicon.png">
+
+    <div class="package-content">
+        <a href="https://sites.google.com/view/retrohacklab/repo/appsync-for-os-3">
+            AppSync Unified for OS 3.1
+        </a>
+
+        <span>Accept Install Cracked Apps on iPhoneOS 3.1.x</span>
+    </div>
+</div>
+
+<!-- SAM -->
+
+<div class="package">
+    <img src="https://www.time2talk.co.uk/cdn/shop/products/iphone-unlock_2000x.png?v=1612814197">
+
+    <div class="package-content">
+        <a href="https://sites.google.com/view/retrohacklab/repo/bingner-sam">
+            SAM
+        </a>
+
+        <span>Subscriber Artificial Module</span>
+    </div>
+</div>
+
+<!-- SAMPrefs -->
+
+<div class="package">
+    <img src="https://www.time2talk.co.uk/cdn/shop/products/iphone-unlock_2000x.png?v=1612814197">
+
+    <div class="package-content">
+        <a href="https://sites.google.com/view/retrohacklab/repo/bingner-sam">
+            SAMPrefs
+        </a>
+
+        <span>Activation/Factory Activation/Désimlockage Preferences panel for SAM</span>
+    </div>
+</div>
+
+<!-- AppStoreFix -->
+
+<div class="package">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1OcsCgxffz5uWrj3h7T_VDBv7f1MdcsRaow&s">
+
+    <div class="package-content">
+        <a href="https://sites.google.com/view/retrohacklab/repo/appstorefix">
+            AppStoreFix (iOS 6)
+        </a>
+
+        <span>Restore App Store functionality on iOS 6 Only</span>
+    </div>
+</div>
+
+<!-- OTABlocker -->
+
+<div class="package">
+    <img src="https://cdn-icons-png.flaticon.com/512/1828/1828843.png">
+
+    <div class="package-content">
+        <a href="https://sites.google.com/view/retrohacklab/repo/otablocker">
+            OTABlocker
+        </a>
+
+        <span>Disable OTA software updates</span>
+    </div>
+</div>
+
+<!-- Cydia -->
+
+<div class="package">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBalBPeesxOwmrI4miEM4SgffMTw2qo6rPZg&s">
+
+    <div class="package-content">
+        <a href="https://sites.google.com/view/retrohacklab/repo/cydia-saurik">
+            Cydia
+        </a>
+
+        <span>Essential APT & Debian Package Manager Utility</span>
+    </div>
+</div>
+
+<!-- Ultrasn0w -->
+
+<div class="package">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYjBUv5Mg18OKehELV0QdhCniGygpVjXZtlj3GunyDTg&s=10">
+
+    <div class="package-content">
+        <a href="https://sites.google.com/view/repo-ultrasn0w/">
+            Ultrasn0w
+        </a>
+
+        <span>Carrier unlock utility</span>
+    </div>
+</div>
+
+<!-- YQL -->
+
+<div class="package">
+    <img src="https://cydia.skyglow.es/assets/images/icons/tweaks/itunesstorex.png">
+
+    <div class="package-content">
+        <a href="https://sites.google.com/view/retrohacklab/repo/yql/">
+            YQL Prefs
+        </a>
+
+        <span>Package of Cydia Skyglow & Bag XML & Requis & Electimon Tweaks</span>
+    </div>
+</div>
+
+<!-- UnlockA5 -->
+
+<div class="package">
+    <img src="https://cydia.invoxiplaygames.uk/img/tweakicon.png">
+
+    <div class="package-content">
+        <a href="https://sites.google.com/view/retrohacklab/repo/unlocka5">
+            UnlockA5 (Obsolete)
+        </a>
+
+        <span>Carrier Unlock Utiltiy & Fix Cellular Signal By R-SIM </span>
+    </div>
+</div>
+
+<!-- Unlock7sX -->
+
+<div class="package">
+    <img src="https://cydia.invoxiplaygames.uk/img/tweakicon.png">
+
+    <div class="package-content">
+        <a href="#">
+            Unlock7sX (Obsolete)
+        </a>
+
+        <span>Hacktivation Tweak Only</span>
+    </div>
+</div>
+
+<!-- TubeRepair -->
+
+<div class="package">
+    <img src="https://cydia.skyglow.es/tweakicons/TubeRepair.png">
+
+    <div class="package-content">
+        <a href="https://sites.google.com/view/retrohacklab/repo/tuberepair">
+            TubeRepair
+        </a>
+
+        <span>Restore classic YouTube app</span>
+    </div>
+</div>
+
+<!-- iFile Trial -->
+
+<div class="package">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVvwUX0jyDXwn8eJw6N1l6i2fr3zDEylt7Oki-X2BFbw&s=10">
+
+    <div class="package-content">
+        <a href="https://sites.google.com/view/retrohacklab/repo/ifile">
+            iFile (Trial)
+        </a>
+
+        <span>Classic file manager for iOS</span>
+    </div>
+</div>
+
+</div>
+
+</body>
+</html>
