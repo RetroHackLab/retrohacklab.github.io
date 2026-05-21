@@ -1,1 +1,27 @@
+==================================================
+        RETRO HACKLAB'S DEBIAN REPOSITORY
+==================================================
+[Folder Status] : ACTIVE
+[Target Path]   : /debs/
+[Description]   : Core storage directory for all compiled .deb package payloads.
 
+--------------------------------------------------
+ℹ️ ARCHIVE METADATA & PARSING INFORMATION
+--------------------------------------------------
+• Control ID      : com.retrohacklab.repo
+• Binary Engine   : dpkg-deb / APT Static Architecture
+• Host Endpoint   : https://github.io
+• Web Interface   : https://google.com
+• Supported Arch  : iphoneos-arm, iphoneos-arm64
+• Deployment Mode : GitHub Pages Static CDN
+
+--------------------------------------------------
+⚠️ PACKAGING INSTRUCTIONS FOR RETROHACKLAB
+--------------------------------------------------
+1. Drop your raw decrypted .deb tweaks into this directory.
+2. Run 'dpkg-scanpackages' to parse binary headers into the master 'Packages' index.
+3. Compress indexes using gzip and bzip2.
+4. Update the root 'Release' manifest.
+
+"Jailbreak is not a crime, it's an art preservation."
+==================================================
