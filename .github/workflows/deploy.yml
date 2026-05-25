@@ -5,6 +5,12 @@ on:
     branches:
       - main
 
+# OBLIGATOIRE : Donne les droits d'accès à GitHub Pages
+permissions:
+  contents: read
+  id-token: write
+  pages: write
+
 concurrency:
   group: pages
   cancel-in-progress: true
