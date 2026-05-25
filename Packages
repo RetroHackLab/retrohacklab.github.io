@@ -7,7 +7,7 @@ Depends: firmware (>= 5.0), mobilesubstrate (>= 0.9.5100), firmware (<< 26.0)
 Provides: appsync
 Section: Tweaks
 Description: Enables the ability to install unsigned/fakesigned iOS applications natively without signature errors on ARMv7 devices.
-Filename: debs/ai.akemi.appsyncunified_116.0_iphoneos-arm.akemi-git-235aca6cddfbdc9fa87fcb5b2aec2df37ed6d65a (1).deb
+Filename: debs/ai.akemi.appsyncunified_116.0_iphoneos-arm.akemi-git-235aca6cddfbdc9fa87fcb5b2aec2df37ed6d65a.deb
 
 Package: cydia
 Name: Cydia Installer
