@@ -1,8 +1,8 @@
-Origin: Mon Repo Tweak
-Label: Mon Repo Tweak
+Origin: Retro HackLab's Repo
+Label: Retro HackLab's Repo
 Suite: stable
 Version: 1.0.0
 Codename: ios
 Architectures: iphoneos-arm
 Components: main
-Description: Depot personnel pour AppSync (32-bit).
+Welcome to Retro HackLab's Repo
