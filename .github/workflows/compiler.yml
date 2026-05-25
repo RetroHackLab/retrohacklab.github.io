@@ -32,7 +32,6 @@ jobs:
         echo "Description: Welcome to Retro HackLab's Repo" >> Release
 
         # Compression des fichiers d'indexation
-        rm -f Packages.gz Packages.bz2
         gzip -fk Packages
         bzip2 -fk Packages
 
