@@ -5,6 +5,10 @@ on:
     paths:
       - 'Packages'
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -13,27 +17,29 @@ jobs:
       uses: actions/checkout@v4
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
+        fetch-depth: 0
 
     - name: Generate Release File and Compress Indexes
       run: |
-        # Génération du fichier Release restreint au 32-bit (iphoneos-arm)
-        echo "Origin: Mon Repo Tweak" > Release
-        echo "Label: Mon Repo Tweak" >> Release
+        # Génération du fichier Release avec les informations de Retro HackLab
+        echo "Origin: Retro HackLab's Repo" > Release
+        echo "Label: Retro HackLab's Repo" >> Release
         echo "Suite: stable" >> Release
         echo "Version: 1.0.0" >> Release
         echo "Codename: ios" >> Release
         echo "Architectures: iphoneos-arm" >> Release
         echo "Components: main" >> Release
-        echo "Description: Depot personnel pour AppSync (32-bit)." >> Release
+        echo "Description: Welcome to Retro HackLab's Repo" >> Release
 
         # Compression des fichiers d'indexation
+        rm -f Packages.gz Packages.bz2
         gzip -fk Packages
         bzip2 -fk Packages
 
     - name: Commit and Push Files
       run: |
         git config --global user.name "github-actions[bot]"
-        git config --global user.email "github-actions[bot]@://github.com"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
         git add Packages.gz Packages.bz2 Release
-        git diff-index --quiet HEAD || git commit -m "🤖 Auto-compression: Mode iphoneos-arm actif"
+        git diff-index --quiet HEAD || git commit -m "🤖 Auto-compression: Retro HackLab's Repo mis à jour [skip ci]"
         git push
