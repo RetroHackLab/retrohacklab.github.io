@@ -11,16 +11,29 @@ jobs:
     steps:
     - name: Checkout Repository
       uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
 
-    - name: Generate Gzip and Bzip2
+    - name: Generate Release File and Compress Indexes
       run: |
-        gzip -c Packages > Packages.gz
-        bzip2 -c Packages > Packages.bz2
+        # Génération du fichier Release restreint au 32-bit (iphoneos-arm)
+        echo "Origin: Mon Repo Tweak" > Release
+        echo "Label: Mon Repo Tweak" >> Release
+        echo "Suite: stable" >> Release
+        echo "Version: 1.0.0" >> Release
+        echo "Codename: ios" >> Release
+        echo "Architectures: iphoneos-arm" >> Release
+        echo "Components: main" >> Release
+        echo "Description: Depot personnel pour AppSync (32-bit)." >> Release
 
-    - name: Commit and Push Compressed Files
+        # Compression des fichiers d'indexation
+        gzip -fk Packages
+        bzip2 -fk Packages
+
+    - name: Commit and Push Files
       run: |
         git config --global user.name "github-actions[bot]"
-        git config --global user.email "github-actions[bot]@users.noreply.github.com"
-        git add Packages.gz Packages.bz2
-        git diff-index --quiet HEAD || git commit -m "🤖 Auto-compression: Packages.gz & Packages.bz2 updated"
+        git config --global user.email "github-actions[bot]@://github.com"
+        git add Packages.gz Packages.bz2 Release
+        git diff-index --quiet HEAD || git commit -m "🤖 Auto-compression: Mode iphoneos-arm actif"
         git push
