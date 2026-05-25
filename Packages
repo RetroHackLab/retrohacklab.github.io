@@ -11,25 +11,80 @@ Filename: debs/appsync.deb
 
 Package: cydia
 Name: Cydia Installer
-Version: 1.1.30
+Version: 1.1.8
 Architecture: iphoneos-arm
-Maintainer: Jay Freeman (saurik)
+Maintainer: Jay Freeman (saurik) <saurik@saurik.com>
 Depends: apt7, debianutils, dpkg (>= 1.14.25-8)
 Essential: yes
 Section: Packaging
-Description: Graphical frontend for APT, final stable release for legacy devices.
-Filename: debs/cydia_1.1.30_iphoneos-arm.deb
+Description: Graphical frontend for APT, legacy release for older evasion/redsn0w eras.
+Filename: debs/cydia_1.1.8_iphoneos-arm.deb
 
 Package: cydia
 Name: Cydia Installer
-Version: 1.1.27
+Version: 1.1.9
 Architecture: iphoneos-arm
-Maintainer: Jay Freeman (saurik)
+Maintainer: Jay Freeman (saurik) <saurik@saurik.com>
 Depends: apt7, debianutils, dpkg (>= 1.14.25-8)
 Essential: yes
 Section: Packaging
-Description: Graphical frontend for APT, stable iOS 9/10 transition release.
-Filename: debs/cydia_1.1.27_iphoneos-arm.deb
+Description: Graphical frontend for APT, classic version optimized for iOS 6/7.
+Filename: debs/cydia_1.1.9_iphoneos-arm.deb
+
+Package: cydia
+Name: Cydia Installer
+Version: 1.1.18
+Architecture: iphoneos-arm
+Maintainer: Jay Freeman (saurik) <saurik@saurik.com>
+Depends: apt7, debianutils, dpkg (>= 1.14.25-8)
+Essential: yes
+Section: Packaging
+Description: Graphical frontend for APT, historical 1.1.1x series release.
+Filename: debs/cydia_1.1.18_iphoneos-arm.deb
+
+Package: cydia
+Name: Cydia Installer
+Version: 1.1.19
+Architecture: iphoneos-arm
+Maintainer: Jay Freeman (saurik) <saurik@saurik.com>
+Depends: apt7, debianutils, dpkg (>= 1.14.25-8)
+Essential: yes
+Section: Packaging
+Description: Graphical frontend for APT, stable update for legacy environments.
+Filename: debs/cydia_1.1.19_iphoneos-arm.deb
+
+Package: cydia
+Name: Cydia Installer
+Version: 1.1.20
+Architecture: iphoneos-arm
+Maintainer: Jay Freeman (saurik) <saurik@saurik.com>
+Depends: apt7, debianutils, dpkg (>= 1.14.25-8)
+Essential: yes
+Section: Packaging
+Description: Graphical frontend for APT, initial base release of the 1.1.2x series.
+Filename: debs/cydia_1.1.20_iphoneos-arm.deb
+
+Package: cydia
+Name: Cydia Installer
+Version: 1.1.23
+Architecture: iphoneos-arm
+Maintainer: Jay Freeman (saurik) <saurik@saurik.com>
+Depends: apt7, debianutils, dpkg (>= 1.14.25-8)
+Essential: yes
+Section: Packaging
+Description: Graphical frontend for APT, historic 1.1.2x branch release.
+Filename: debs/cydia_1.1.23_iphoneos-arm.deb
+
+Package: cydia
+Name: Cydia Installer
+Version: 1.1.24
+Architecture: iphoneos-arm
+Maintainer: Jay Freeman (saurik) <saurik@saurik.com>
+Depends: apt7, debianutils, dpkg (>= 1.14.25-8)
+Essential: yes
+Section: Packaging
+Description: Graphical frontend for APT, introduced early iOS 9 jailbreak fixes.
+Filename: debs/cydia_1.1.24_iphoneos-arm.deb
 
 Package: cydia
 Name: Cydia Installer
@@ -44,55 +99,22 @@ Filename: debs/cydia_1.1.26_iphoneos-arm.deb
 
 Package: cydia
 Name: Cydia Installer
-Version: 1.1.24
+Version: 1.1.27
 Architecture: iphoneos-arm
-Maintainer: Jay Freeman (saurik)
+Maintainer: Jay Freeman (saurik) <saurik@saurik.com>
 Depends: apt7, debianutils, dpkg (>= 1.14.25-8)
 Essential: yes
 Section: Packaging
-Description: Graphical frontend for APT, introduced early iOS 9 jailbreak fixes.
-Filename: debs/cydia_1.1.24_iphoneos-arm.deb
+Description: Graphical frontend for APT, stable iOS 9/10 transition release.
+Filename: debs/cydia_1.1.27_iphoneos-arm.deb
 
 Package: cydia
 Name: Cydia Installer
-Version: 1.1.23
+Version: 1.1.29
 Architecture: iphoneos-arm
-Maintainer: Jay Freeman (saurik)
+Maintainer: Jay Freeman (saurik) <saurik@saurik.com>
 Depends: apt7, debianutils, dpkg (>= 1.14.25-8)
 Essential: yes
 Section: Packaging
-Description: Graphical frontend for APT, historic 1.1.2x branch release.
-Filename: debs/cydia_1.1.23_iphoneos-arm.deb
-
-Package: cydia
-Name: Cydia Installer
-Version: 1.1.20
-Architecture: iphoneos-arm
-Maintainer: Jay Freeman (saurik)
-Depends: apt7, debianutils, dpkg (>= 1.14.25-8)
-Essential: yes
-Section: Packaging
-Description: Graphical frontend for APT, initial base release of the 1.1.2x series.
-Filename: debs/cydia_1.1.20_iphoneos-arm.deb
-
-Package: cydia
-Name: Cydia Installer
-Version: 1.1.9
-Architecture: iphoneos-arm
-Maintainer: Jay Freeman (saurik)
-Depends: apt7, debianutils, dpkg (>= 1.14.25-8)
-Essential: yes
-Section: Packaging
-Description: Graphical frontend for APT, classic version optimized for iOS 6/7.
-Filename: debs/cydia_1.1.9_iphoneos-arm.deb
-
-Package: cydia
-Name: Cydia Installer
-Version: 1.1.8
-Architecture: iphoneos-arm
-Maintainer: Jay Freeman (saurik)
-Depends: apt7, debianutils, dpkg (>= 1.14.25-8)
-Essential: yes
-Section: Packaging
-Description: Graphical frontend for APT, legacy release for older evasion/redsn0w eras.
-Filename: debs/cydia_1.1.8_iphoneos-arm.deb
+Description: Graphical frontend for APT, final pre-modern maintenance release.
+Filename: debs/cydia_1.1.29_iphoneos-arm.deb
