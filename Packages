@@ -13,7 +13,7 @@ Package: cydia
 Name: Cydia Installer
 Version: 1.1.30
 Architecture: iphoneos-arm
-Maintainer: Jay Freeman (saurik) 
+Maintainer: Jay Freeman (saurik)
 Depends: apt7, debianutils, dpkg (>= 1.14.25-8)
 Essential: yes
 Section: Packaging
@@ -24,7 +24,7 @@ Package: cydia
 Name: Cydia Installer
 Version: 1.1.27
 Architecture: iphoneos-arm
-Maintainer: Jay Freeman (saurik) 
+Maintainer: Jay Freeman (saurik)
 Depends: apt7, debianutils, dpkg (>= 1.14.25-8)
 Essential: yes
 Section: Packaging
@@ -46,7 +46,7 @@ Package: cydia
 Name: Cydia Installer
 Version: 1.1.24
 Architecture: iphoneos-arm
-Maintainer: Jay Freeman (saurik) 
+Maintainer: Jay Freeman (saurik)
 Depends: apt7, debianutils, dpkg (>= 1.14.25-8)
 Essential: yes
 Section: Packaging
@@ -57,7 +57,7 @@ Package: cydia
 Name: Cydia Installer
 Version: 1.1.23
 Architecture: iphoneos-arm
-Maintainer: Jay Freeman (saurik) 
+Maintainer: Jay Freeman (saurik)
 Depends: apt7, debianutils, dpkg (>= 1.14.25-8)
 Essential: yes
 Section: Packaging
@@ -68,7 +68,7 @@ Package: cydia
 Name: Cydia Installer
 Version: 1.1.20
 Architecture: iphoneos-arm
-Maintainer: Jay Freeman (saurik) 
+Maintainer: Jay Freeman (saurik)
 Depends: apt7, debianutils, dpkg (>= 1.14.25-8)
 Essential: yes
 Section: Packaging
@@ -79,7 +79,7 @@ Package: cydia
 Name: Cydia Installer
 Version: 1.1.9
 Architecture: iphoneos-arm
-Maintainer: Jay Freeman (saurik) 
+Maintainer: Jay Freeman (saurik)
 Depends: apt7, debianutils, dpkg (>= 1.14.25-8)
 Essential: yes
 Section: Packaging
@@ -90,7 +90,7 @@ Package: cydia
 Name: Cydia Installer
 Version: 1.1.8
 Architecture: iphoneos-arm
-Maintainer: Jay Freeman (saurik) 
+Maintainer: Jay Freeman (saurik)
 Depends: apt7, debianutils, dpkg (>= 1.14.25-8)
 Essential: yes
 Section: Packaging
