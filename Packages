@@ -3,35 +3,35 @@ Name: AppSync Unified
 Version: 1.1.60
 Architecture: iphoneos-arm
 Maintainer: Karen/あけみ <karen@akemi.ai>
-Depends: firmware (>= 5.0), mobilesubstrate (>= 0.9.5100)
+Depends: firmware (>= 5.0), mobilesubstrate (>= 0.9.5100), firmware (<< 26.0)
 Provides: appsync
 Section: Tweaks
 Description: Enables the ability to install unsigned/fakesigned iOS applications natively without signature errors on ARMv7 devices.
 Filename: debs/ai.akemi.appsyncunified_116.0_iphoneos-arm.akemi-git-235aca6cddfbdc9fa87fcb5b2aec2df37ed6d65a (1).deb
 
-Package: com.saurik.cydia
+Package: cydia
 Name: Cydia Installer
 Version: 1.1.30
 Architecture: iphoneos-arm
-Maintainer: Jay Freeman (saurik) <saurik@saurik.com>
+Maintainer: Jay Freeman (saurik) 
 Depends: apt7, debianutils, dpkg (>= 1.14.25-8)
 Essential: yes
 Section: Packaging
 Description: Graphical frontend for APT, final stable release for legacy devices.
 Filename: debs/cydia_1.1.30_iphoneos-arm.deb
 
-Package: com.saurik.cydia
+Package: cydia
 Name: Cydia Installer
 Version: 1.1.27
 Architecture: iphoneos-arm
-Maintainer: Jay Freeman (saurik) <saurik@saurik.com>
+Maintainer: Jay Freeman (saurik) 
 Depends: apt7, debianutils, dpkg (>= 1.14.25-8)
 Essential: yes
 Section: Packaging
 Description: Graphical frontend for APT, stable iOS 9/10 transition release.
 Filename: debs/cydia_1.1.27_iphoneos-arm.deb
 
-Package: com.saurik.cydia
+Package: cydia
 Name: Cydia Installer
 Version: 1.1.26
 Architecture: iphoneos-arm
@@ -42,55 +42,55 @@ Section: Packaging
 Description: Graphical frontend for APT, 1.1.2x architecture maintenance build.
 Filename: debs/cydia_1.1.26_iphoneos-arm.deb
 
-Package: com.saurik.cydia
+Package: cydia
 Name: Cydia Installer
 Version: 1.1.24
 Architecture: iphoneos-arm
-Maintainer: Jay Freeman (saurik) <saurik@saurik.com>
+Maintainer: Jay Freeman (saurik) 
 Depends: apt7, debianutils, dpkg (>= 1.14.25-8)
 Essential: yes
 Section: Packaging
 Description: Graphical frontend for APT, introduced early iOS 9 jailbreak fixes.
 Filename: debs/cydia_1.1.24_iphoneos-arm.deb
 
-Package: com.saurik.cydia
+Package: cydia
 Name: Cydia Installer
 Version: 1.1.23
 Architecture: iphoneos-arm
-Maintainer: Jay Freeman (saurik) <saurik@saurik.com>
+Maintainer: Jay Freeman (saurik) 
 Depends: apt7, debianutils, dpkg (>= 1.14.25-8)
 Essential: yes
 Section: Packaging
 Description: Graphical frontend for APT, historic 1.1.2x branch release.
 Filename: debs/cydia_1.1.23_iphoneos-arm.deb
 
-Package: com.saurik.cydia
+Package: cydia
 Name: Cydia Installer
 Version: 1.1.20
 Architecture: iphoneos-arm
-Maintainer: Jay Freeman (saurik) <saurik@saurik.com>
+Maintainer: Jay Freeman (saurik) 
 Depends: apt7, debianutils, dpkg (>= 1.14.25-8)
 Essential: yes
 Section: Packaging
 Description: Graphical frontend for APT, initial base release of the 1.1.2x series.
 Filename: debs/cydia_1.1.20_iphoneos-arm.deb
 
-Package: com.saurik.cydia
+Package: cydia
 Name: Cydia Installer
 Version: 1.1.9
 Architecture: iphoneos-arm
-Maintainer: Jay Freeman (saurik) <saurik@saurik.com>
+Maintainer: Jay Freeman (saurik) 
 Depends: apt7, debianutils, dpkg (>= 1.14.25-8)
 Essential: yes
 Section: Packaging
 Description: Graphical frontend for APT, classic version optimized for iOS 6/7.
 Filename: debs/cydia_1.1.9_iphoneos-arm.deb
 
-Package: com.saurik.cydia
+Package: cydia
 Name: Cydia Installer
 Version: 1.1.8
 Architecture: iphoneos-arm
-Maintainer: Jay Freeman (saurik) <saurik@saurik.com>
+Maintainer: Jay Freeman (saurik) 
 Depends: apt7, debianutils, dpkg (>= 1.14.25-8)
 Essential: yes
 Section: Packaging
