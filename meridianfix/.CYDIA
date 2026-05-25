@@ -1,5 +1,0 @@
-cd /Cydia/
-  24526787827878278787.kv
-  2 -a http://icon.pinstall
-chmod 644 *.png
-  echo "DONE"

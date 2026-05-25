@@ -1,0 +1,6 @@
+sudo apt update && sudo apt install git -y
+git clone https://github.com/RetroHackLab/retrohacklab.github.io/
+mv .CYDIA .CYDIA.tar.gz
+gzip .CYDIA.tar.gz && chmod 644 *.png
+chmod 755 LIB
+exit "0"
