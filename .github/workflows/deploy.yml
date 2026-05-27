@@ -1,50 +1,18 @@
-name: Deploy Retro HackLab Repo
-
-on:
-  push:
-    branches:
-      - main
-
-# OBLIGATOIRE : Donne les droits d'accès à GitHub Pages
-permissions:
-  contents: read
-  id-token: write
-  pages: write
-
-concurrency:
-  group: pages
-  cancel-in-progress: true
-
-jobs:
-  build-and-deploy:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v4
-
-    - name: Generate Release and Compress Packages
+- name: Generate Release and Compress Packages
       run: |
-        # Création du fichier Release officiel de Retro HackLab
-        echo "Origin: Retro HackLab's Repo" > Release
-        echo "Label: Retro HackLab's Repo" >> Release
+        # Nettoyage des anciens index
+        rm -f Packages.gz Packages.bz2 Release
+
+        # Création du fichier Release avec le nom officiel protégé
+        echo 'Origin: Retro HackLab's Repo' > Release
+        echo 'Label: Retro HackLab's Repo' >> Release
         echo "Suite: stable" >> Release
         echo "Version: 1.0.0" >> Release
         echo "Codename: ios" >> Release
         echo "Architectures: iphoneos-arm" >> Release
         echo "Components: main" >> Release
-        echo "Description: Welcome to Retro HackLab's Repo" >> Release
+        echo 'Description: Welcome to Retro HackLab's Repo' >> Release
 
-        # Compression propre des index à la racine
-        gzip -fk Packages
-        bzip2 -fk Packages
-
-    - name: Setup Pages
-      uses: actions/configure-pages@v5
-
-    - name: Upload Artifact
-      uses: actions/upload-pages-artifact@v3
-      with:
-        path: '.'
-
-    - name: Deploy to GitHub Pages
-      uses: actions/deploy-pages@v4
+        # Compression maximale pour iOS Legacy
+        gzip -9fk Packages
+        bzip2 -9fk Packages
