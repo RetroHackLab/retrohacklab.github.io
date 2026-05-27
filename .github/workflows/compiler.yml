@@ -1,0 +1,24 @@
+- name: Dynamically Scan and Generate Indexes
+      run: |
+        # 1. Installer les outils de packaging Debian indispensables (dpkg-dev et bzip2)
+        sudo apt-get update && sudo apt-get install -y dpkg-dev bzip2
+
+        # 2. Nettoyer proprement les anciens index
+        rm -f Packages Packages.gz Packages.bz2 Release
+
+        # 3. Scanner le dossier debs pour générer un fichier Packages 100% parfait et conforme
+        # Cette commande calcule TOUT automatiquement (Taille exacte, MD5, SHA, et garde l'ID original "cydia")
+        dpkg-scanpackages -m debs /dev/null > Packages
+
+        # 4. Créer le fichier Release épuré sans la ligne Components qui bloquait Cydia
+        echo "Origin: Retro HackLab's Repo" > Release
+        echo "Label: Retro HackLab's Repo" >> Release
+        echo "Suite: stable" >> Release
+        echo "Version: 1.0.0" >> Release
+        echo "Codename: ios" >> Release
+        echo "Architectures: iphoneos-arm" >> Release
+        echo "Description: Welcome to Retro HackLab's Repo" >> Release
+
+        # 5. Compression stricte pour Cydia
+        gzip -9fk Packages
+        bzip2 -9fk Packages
