@@ -1,6 +1,35 @@
-- name: Generate Release and Compress Packages
+name: Deploy Retro HackLab Repo
+
+on:
+  push:
+    branches:
+      - main
+
+# OBLIGATOIRE : Donne les droits d'accès pour modifier le dépôt et publier les Pages
+permissions:
+  contents: write
+  id-token: write
+  pages: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0 # Récupère l'historique complet pour éviter les conflits Git
+
+    - name: Generate Release and Compress Packages
       run: |
-        # Nettoyage des anciens index
+        # Installation indispensable de bzip2 sur la VM Ubuntu
+        sudo apt-get update && sudo apt-get install -y bzip2
+
+        # Ton code de nettoyage
         rm -f Packages.gz Packages.bz2 Release
 
         # Création du fichier Release officiel
@@ -16,3 +45,31 @@
         # Compression stricte et forcée pour Cydia
         gzip -9fk Packages
         bzip2 -9fk Packages
+
+    - name: Upload and Push Generated Files to Main Branch
+      run: |
+        # Configuration de l'identité Git du robot
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        
+        # Ajout des fichiers générés à l'index Git
+        git add Packages.gz Packages.bz2 Release
+        
+        # Si des modifications sont détectées, on les push de force sur la branche main
+        if ! git diff --cached --quiet; then
+          git commit -m "Autogen: Update repository indexes (.bz2, .gz, Release)"
+          git push origin main
+        else
+          echo "Aucun nouveau changement détecté dans les index."
+        fi
+
+    - name: Setup Pages
+      uses: actions/configure-pages@v5
+
+    - name: Upload Artifact
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: '.'
+
+    - name: Deploy to GitHub Pages
+      uses: actions/deploy-pages@v4
