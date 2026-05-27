@@ -1,13 +1,32 @@
-- name: Dynamically Scan and Generate Indexes
+name: Compiler and Deploy Repo
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+  id-token: write
+  pages: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
+    - name: Dynamically Scan and Generate Indexes
       run: |
-        # 1. Installer uniquement bzip2 (ultra rapide, pas besoin de dpkg-dev)
         sudo apt-get update && sudo apt-get install -y bzip2
-
-        # 2. On supprime SEULEMENT les anciennes compressions et le vieux Release
-        # (On GARDE le fichier Packages original pour ne pas le perdre !)
         rm -f Packages.gz Packages.bz2 Release
-
-        # 3. Création du fichier Release officiel épuré (sans Components)
         echo "Origin: Retro HackLab's Repo" > Release
         echo "Label: Retro HackLab's Repo" >> Release
         echo "Suite: stable" >> Release
@@ -15,7 +34,24 @@
         echo "Codename: ios" >> Release
         echo "Architectures: iphoneos-arm" >> Release
         echo "Description: Welcome to Retro HackLab's Repo" >> Release
-
-        # 4. Compression stricte et forcée pour Cydia
         gzip -9fk Packages
         bzip2 -9fk Packages
+
+    - name: Upload and Push Generated Files to Main Branch
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add -f Packages Packages.gz Packages.bz2 Release
+        git commit -m "Autogen: Force push updated indexes (.bz2, .gz, Release) [skip ci]" || echo "Aucun changement à commit."
+        git push origin main
+
+    - name: Setup Pages
+      uses: actions/configure-pages@v5
+
+    - name: Upload Artifact
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: '.'
+
+    - name: Deploy to GitHub Pages
+      uses: actions/deploy-pages@v4
