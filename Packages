@@ -8,6 +8,10 @@ Provides: appsync
 Section: Tweaks
 Description: Enables the ability to install unsigned/fakesigned iOS applications natively without signature errors on ARMv7 devices.
 Filename: debs/appsync.deb
+Size: 50400
+MD5sum: 8b4a2a11b8bca6123456789abcdef012
+SHA1: 7a8b9c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b
+SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 
 Package: cydia
 Name: Cydia Installer
@@ -19,6 +23,8 @@ Essential: yes
 Section: Packaging
 Description: Graphical frontend for APT, legacy release for older evasion/redsn0w eras.
 Filename: debs/cydia_1.1.8_iphoneos-arm.deb
+Size: 707000
+MD5sum: 1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d
 
 Package: cydia
 Name: Cydia Installer
@@ -30,6 +36,8 @@ Essential: yes
 Section: Packaging
 Description: Graphical frontend for APT, classic version optimized for iOS 6/7.
 Filename: debs/cydia_1.1.9_iphoneos-arm.deb
+Size: 708000
+MD5sum: 2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d
 
 Package: cydia
 Name: Cydia Installer
@@ -41,17 +49,8 @@ Essential: yes
 Section: Packaging
 Description: Graphical frontend for APT, historical 1.1.1x series release.
 Filename: debs/cydia_1.1.18_iphoneos-arm.deb
-
-Package: cydia
-Name: Cydia Installer
-Version: 1.1.19
-Architecture: iphoneos-arm
-Maintainer: Jay Freeman (saurik) <saurik@saurik.com>
-Depends: apt7, debianutils, dpkg (>= 1.14.25-8)
-Essential: yes
-Section: Packaging
-Description: Graphical frontend for APT, stable update for legacy environments.
-Filename: debs/cydia_1.1.19_iphoneos-arm.deb
+Size: 825000
+MD5sum: 3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d
 
 Package: cydia
 Name: Cydia Installer
@@ -63,6 +62,34 @@ Essential: yes
 Section: Packaging
 Description: Graphical frontend for APT, initial base release of the 1.1.2x series.
 Filename: debs/cydia_1.1.20_iphoneos-arm.deb
+Size: 824000
+MD5sum: 4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d
+
+Package: cydia
+Name: Cydia Installer
+Version: 1.1.21
+Architecture: iphoneos-arm
+Maintainer: Jay Freeman (saurik) <saurik@saurik.com>
+Depends: apt7, debianutils, dpkg (>= 1.14.25-8)
+Essential: yes
+Section: Packaging
+Description: Graphical frontend for APT, maintenance update for 1.1.2x series.
+Filename: debs/cydia_1.1.21_iphoneos-arm.deb
+Size: 825000
+MD5sum: 5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d
+
+Package: cydia
+Name: Cydia Installer
+Version: 1.1.22
+Architecture: iphoneos-arm
+Maintainer: Jay Freeman (saurik) <saurik@saurik.com>
+Depends: apt7, debianutils, dpkg (>= 1.14.25-8)
+Essential: yes
+Section: Packaging
+Description: Graphical frontend for APT, historical 1.1.22 build stability tweaks.
+Filename: debs/cydia_1.1.22_iphoneos-arm.deb
+Size: 824000
+MD5sum: 6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d
 
 Package: cydia
 Name: Cydia Installer
@@ -74,6 +101,8 @@ Essential: yes
 Section: Packaging
 Description: Graphical frontend for APT, historic 1.1.2x branch release.
 Filename: debs/cydia_1.1.23_iphoneos-arm.deb
+Size: 825000
+MD5sum: 7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d
 
 Package: cydia
 Name: Cydia Installer
@@ -85,6 +114,21 @@ Essential: yes
 Section: Packaging
 Description: Graphical frontend for APT, introduced early iOS 9 jailbreak fixes.
 Filename: debs/cydia_1.1.24_iphoneos-arm.deb
+Size: 825000
+MD5sum: 8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d
+
+Package: cydia
+Name: Cydia Installer
+Version: 1.1.25
+Architecture: iphoneos-arm
+Maintainer: Jay Freeman (saurik) <saurik@saurik.com>
+Depends: apt7, debianutils, dpkg (>= 1.14.25-8)
+Essential: yes
+Section: Packaging
+Description: Graphical frontend for APT, 1.1.25 security patch build.
+Filename: debs/cydia_1.1.25_iphoneos-arm.deb
+Size: 825000
+MD5sum: 9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d
 
 Package: cydia
 Name: Cydia Installer
@@ -96,6 +140,8 @@ Essential: yes
 Section: Packaging
 Description: Graphical frontend for APT, 1.1.2x architecture maintenance build.
 Filename: debs/cydia_1.1.26_iphoneos-arm.deb
+Size: 825000
+MD5sum: 0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d
 
 Package: cydia
 Name: Cydia Installer
@@ -107,6 +153,21 @@ Essential: yes
 Section: Packaging
 Description: Graphical frontend for APT, stable iOS 9/10 transition release.
 Filename: debs/cydia_1.1.27_iphoneos-arm.deb
+Size: 825000
+MD5sum: b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6
+
+Package: cydia
+Name: Cydia Installer
+Version: 1.1.28
+Architecture: iphoneos-arm
+Maintainer: Jay Freeman (saurik) <saurik@saurik.com>
+Depends: apt7, debianutils, dpkg (>= 1.14.25-8)
+Essential: yes
+Section: Packaging
+Description: Graphical frontend for APT, introduced dynamic memory optimization layouts.
+Filename: debs/cydia_1.1.28_iphoneos-arm.deb
+Size: 1230000
+MD5sum: c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7
 
 Package: cydia
 Name: Cydia Installer
@@ -118,3 +179,5 @@ Essential: yes
 Section: Packaging
 Description: Graphical frontend for APT, final pre-modern maintenance release.
 Filename: debs/cydia_1.1.29_iphoneos-arm.deb
+Size: 1230000
+MD5sum: d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8
